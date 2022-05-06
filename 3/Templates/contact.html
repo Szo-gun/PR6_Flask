@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "head.html" %}
+{% block content %}
+<title>HTML JavaScript output on same page</title>
+<script type="text/JavaScript">
+    function showMessage(){
+        var message = document.getElementById("message").value;
+        display_message.innerHTML= message;
+    }
+</script>
+    </head>
+    <body>
+        <h2>Witaj na mojej stronie domowej</h1>
+
+        <h1>Kontakt: </h1>
+        <ul>
+        <li><Strong>E-mail: </Strong> piotr.c@xxx.com </li>
+        <li><Strong>Telefon: </Strong> +48 XXX-YYY-ZZZ </li>
+        </ul>
+        <!-- 
+        <h3> Wyślij wiadomość: </h3>
+        <form action="" method="POST"></form>
+            <input type="text" id = "message">
+            <input type="submit" onclick="showMessage()" value="Wyślij" />
+        </form>
+        <p> Dziękuję za wiadomość: <span id = "display_message"></span> </p>
+        </form>
+        -->
+        <form action="" method="POST">
+            <label>Wpisz wiadomość: </label>
+            <input name="tekst"/>
+            <input type="submit" value="Wyślij"/>
+        </form>
+    </body>
+</html>
+{% endblock %}
